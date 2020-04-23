@@ -1,0 +1,9 @@
+.reviewsList {
+  list-style: none;
+  padding: 40px;
+  margin: 0;
+}
+.reviewsListTitle {
+  padding-left: 30px;
+  font-weight: 700;
+}

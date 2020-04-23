@@ -1,0 +1,59 @@
+.loginView {
+  position: relative;
+  z-index: 111;
+}
+.form {
+  width: 320px;
+  margin: 0 auto;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+.loginInput {
+  width: 100%;
+  height: 46px;
+  margin-top: 9px;
+  border-radius: 5px;
+  padding-left: 18px;
+  border: #eaeaea 1px solid;
+  position: relative;
+  transition: 200ms linear all;
+}
+.loginInput:active {
+  width: 110%;
+  height: 56px;
+}
+.loginInput:focus {
+  outline: none;
+  box-shadow: -3px 3px 28px -15px rgba(0, 0, 0, 0.5);
+  top: -5px;
+}
+.loginInput::placeholder {
+  color: #bebebe;
+}
+.title {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+.confirmButton {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  margin-top: 26px;
+  background-color: #3cb878;
+  transition: 200ms all linear;
+}
+.confirmButton:hover {
+  background-color: #329a65;
+}
+.loginInput:invalid {
+  border: 2px solid rgb(221, 50, 50);
+  border-radius: 5px;
+}

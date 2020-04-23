@@ -1,0 +1,45 @@
+.paginateWrapper {
+  background-color: rgba(61, 71, 104, 0.555);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.paginationContainer {
+  display: flex;
+  margin: 0 auto;
+  list-style: none;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0;
+}
+.pageLink {
+  display: block;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  border: 1px #333 solid;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 5px;
+}
+.active {
+  background-color: #464e70;
+  outline: none;
+}
+.disabled {
+  background-color: #58585a;
+}
+.pageBtn {
+  display: block;
+  text-align: center;
+  height: 30px;
+  width: 80px;
+  border: 1px #333 solid;
+  cursor: pointer;
+  user-select: none;
+}

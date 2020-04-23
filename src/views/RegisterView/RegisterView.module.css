@@ -1,0 +1,71 @@
+.registerView {
+  position: relative;
+  z-index: 111;
+}
+.form {
+  width: 320px;
+  height: 100%;
+  margin: 0 auto;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+.registerInput {
+  width: 100%;
+  height: 46px;
+  margin-top: 9px;
+  border-radius: 5px;
+  padding-left: 18px;
+  border: #eaeaea 1px solid;
+  position: relative;
+  transition: 200ms linear all;
+}
+.registerInput:active {
+  width: 110%;
+  height: 56px;
+}
+.registerInput:focus {
+  outline: none;
+  box-shadow: -3px 3px 28px -15px rgba(0, 0, 0, 0.5);
+  top: -5px;
+}
+.registerInput::placeholder {
+  color: #bebebe;
+}
+.title {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+.confirmButton {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  margin-top: 26px;
+  background-color: #3cb878;
+  transition: 200ms all linear;
+}
+.confirmButton:hover {
+  background-color: #329a65;
+}
+.registerInput:invalid {
+  border: 2px solid rgb(221, 50, 50);
+  border-radius: 5px;
+}
+.link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: #8abea3;
+  margin-top: 8px;
+  transition: 200ms linear all;
+}
+.link:hover {
+  color: #329a65;
+}

@@ -1,0 +1,29 @@
+.addBtn {
+  width: 60px;
+  height: 60px;
+  background-color: #5c83a7;
+  background-color: #a75c5c;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: 200ms linear all;
+  position: relative;
+}
+.addBtn:hover {
+  background-color: #466685;
+}
+.sign {
+  width: 50% !important;
+  height: 24px;
+}
+
+.text {
+  color: #e8e8fc;
+  font-weight: bold;
+  position: absolute;
+  width: 60px;
+  left: 80px;
+}

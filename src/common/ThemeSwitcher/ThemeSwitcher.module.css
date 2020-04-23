@@ -1,0 +1,13 @@
+.themeSwitcher {
+  position: absolute;
+  left: 84px;
+  top: 14px;
+}
+.leftIcon {
+  margin-top: 5px;
+  margin-left: 8px;
+}
+.rightIcon {
+  margin-left: 8px;
+  margin-top: 4px;
+}

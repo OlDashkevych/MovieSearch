@@ -26,7 +26,7 @@ class PaginationContainer extends Component {
       <div className={styles.paginateWrapper}>
         <ReactPaginate
           breakLabel={'...'}
-          breakClassName={'break-me'}
+          breakClassName={styles.break}
           pageCount={10}
           marginPagesDisplayed={2}
           pageRangeDisplayed={4}
@@ -34,11 +34,12 @@ class PaginationContainer extends Component {
           containerClassName={styles.paginationContainer}
           subContainerClassName={'pages pagination'}
           pageLinkClassName={styles.pageLink}
+          pageClassName={styles.page}
           activeLinkClassName={styles.active}
           onClick={this.handlePageClick}
           disabledClassName={styles.disabled}
-          previousLinkClassName={styles.pageBtn}
-          nextLinkClassName={styles.pageBtn}
+          previousClassName={styles.pageBtn}
+          nextClassName={styles.pageBtn}
         />
       </div>
     );

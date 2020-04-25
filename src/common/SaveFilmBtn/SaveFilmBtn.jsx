@@ -11,9 +11,10 @@ class SaveFilmBtn extends Component {
   state = { isExist: false };
 
   componentDidMount() {
-    const persistedIds = JSON.parse(localStorage.getItem('ID'));
+    const persistedIds = localStorage.getItem('ID');
     if (persistedIds) {
-      const idExist = persistedIds.includes(this.props.id);
+      const parsedIds = JSON.parse(persistedIds);
+      const idExist = parsedIds.includes(this.props.id);
       if (idExist) {
         this.setState({ isExist: true });
       }
@@ -24,22 +25,23 @@ class SaveFilmBtn extends Component {
     const { isExist } = this.state;
     const { id } = this.props;
     let persistedIds = JSON.parse(localStorage.getItem('ID'));
-    if (persistedIds) {
-      console.log(persistedIds);
-      const idExist = persistedIds.includes(id);
-      if (idExist) {
-        this.setState({ isExist: !isExist });
-        persistedIds = persistedIds.filter(el => el != id);
+    if (id) {
+      if (persistedIds) {
+        const idExist = persistedIds.includes(id);
+        if (idExist) {
+          this.setState({ isExist: !isExist });
+          persistedIds = persistedIds.filter(el => el !== id);
+          localStorage.setItem('ID', JSON.stringify(persistedIds));
+          return;
+        }
+        persistedIds.push(id);
         localStorage.setItem('ID', JSON.stringify(persistedIds));
+        this.setState({ isExist: true });
         return;
       }
-      persistedIds.push(id);
-      localStorage.setItem('ID', JSON.stringify(persistedIds));
-      this.setState({ isExist: true });
-      return;
+      localStorage.setItem('ID', JSON.stringify([id]));
+      this.setState({ isExist: false });
     }
-    localStorage.setItem('ID', JSON.stringify([id]));
-    this.setState({ isExist: false });
   };
 
   render() {

@@ -6,12 +6,24 @@
   height: 56px;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0;
 }
 .headerNav {
-  width: 1000px;
+  width: 68%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+@media (max-width: 960px) {
+  .headerNav {
+    width: 68%;
+  }
+}
+@media (max-width: 768px) {
+  .headerNav {
+    width: 80%;
+  }
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { listMapper } from '../../assets/mapper';
 import * as API from '../../services/server';
 import ArticleList from '../../common/ArticleList/ArticleList';
+import NotFound from '../../common/NotFound/NotFound';
 
 class SavedFilmsView extends Component {
   state = {
@@ -9,16 +10,17 @@ class SavedFilmsView extends Component {
   };
 
   componentDidMount() {
-    const { articles } = this.state;
-
-    const persistedFilms = JSON.parse(localStorage.getItem('ID'));
-    persistedFilms.map(id =>
-      API.getArticlesById(id).then(({ data }) =>
-        this.setState(state => {
-          return { articles: [...state.articles, data] };
-        }),
-      ),
-    );
+    const persistedFilms = localStorage.getItem('ID');
+    if (persistedFilms) {
+      const parsedFilms = JSON.parse(persistedFilms);
+      parsedFilms.map(id =>
+        API.getArticlesById(id).then(({ data }) =>
+          this.setState(state => {
+            return { articles: [...state.articles, data] };
+          }),
+        ),
+      );
+    }
   }
 
   render() {
@@ -28,7 +30,9 @@ class SavedFilmsView extends Component {
       <div className="">
         {articles && articles.length ? (
           <ArticleList items={listMapper(articles)} />
-        ) : null}
+        ) : (
+          <NotFound title="Saved films" />
+        )}
       </div>
     );
   }

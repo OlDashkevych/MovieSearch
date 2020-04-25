@@ -10,3 +10,10 @@
   margin-right: 12px;
   color: '#f3e7d6';
 }
+
+@media (max-width: 960px) {
+  .name,
+  .avatar {
+    display: none;
+  }
+}

@@ -4,7 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 60vw;
+  max-width: 600px;
   margin: 0 auto;
   border-radius: 5px;
 }
@@ -32,14 +33,43 @@
   outline: none;
 }
 .disabled {
-  background-color: #58585a;
+  background-color: #88888b;
+  border-radius: 5px;
 }
 .pageBtn {
   display: block;
   text-align: center;
   height: 30px;
-  width: 80px;
+  width: 46%;
   border: 1px #333 solid;
   cursor: pointer;
   user-select: none;
+  border-radius: 5px;
+  outline: none;
+  margin: 0 16px;
+}
+
+@media (max-width: 768px) {
+  .page,
+  .break {
+    display: none;
+  }
+  .paginationContainer {
+    width: 100%;
+  }
+  .pageBtn {
+    background-color: rgba(107, 142, 218, 0.384);
+    width: 120px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .paginateWrapper {
+    min-width: 256px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 320px) {
 }

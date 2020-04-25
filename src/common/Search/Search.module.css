@@ -1,10 +1,14 @@
 .form {
   margin: 0 auto;
-  width: 500px;
+  width: 62%;
+  max-width: 500px;
   position: relative;
   z-index: 1111;
   display: flex;
   justify-content: space-between;
+
+  /* =========== */
+  /* display: none; */
 }
 .input {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -39,4 +43,9 @@
 }
 .button:hover {
   background-color: rgb(21, 36, 80);
+}
+@media (max-width: 768px) {
+  .form {
+    min-width: 80%;
+  }
 }

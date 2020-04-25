@@ -6,6 +6,7 @@ import AuthLoader from './common/AuthLoader/AuthLoader';
 import App from './App';
 import { store, persistor } from './redux/store';
 import './index.css';
+import './fonts.css';
 
 ReactDOM.render(
   <Provider store={store}>

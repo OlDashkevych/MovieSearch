@@ -10,24 +10,18 @@ const ArticleList = ({ items, location, match }) => {
   return (
     <>
       {items.length ? (
-        <ul className={styles.articleList}>
+        <ul className={styles.list}>
           {items.map(({ id, title, name, backdropPath }) => (
-            <li key={id} className={styles.articleListItem}>
+            <li key={id} className={styles.listItem}>
               <Link
                 to={{
                   pathname: `${routes.MOVIE.path}/${id}`,
                   state: { from: { ...location }, prevPage: { ...match } },
                 }}
-                className={styles.articleListLink}
+                className={styles.listLink}
               >
-                <span className={styles.articleListTitle}>{title || name}</span>
-                <img
-                  src={backdropPath}
-                  alt=""
-                  width="300"
-                  height="173"
-                  className={styles.articleListImage}
-                />
+                <span className={styles.listTitle}>{title || name}</span>
+                <img src={backdropPath} alt="" className={styles.listImage} />
                 <div className={styles.inner} />
               </Link>
             </li>

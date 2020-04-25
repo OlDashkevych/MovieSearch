@@ -6,7 +6,7 @@ import ExitToApp from '@material-ui/icons/ExitToApp';
 
 const LogoutButton = ({ onLogout }) => (
   <button className={styles.button} type="button" onClick={onLogout}>
-    Logout
+    <span className={styles.textBtn}>Logout</span>
     <ExitToApp />
   </button>
 );

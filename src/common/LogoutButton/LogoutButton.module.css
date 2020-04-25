@@ -17,3 +17,11 @@
   background-color: rgb(83, 97, 138);
 }
 
+@media (max-width: 500px) {
+  .textBtn {
+    display: none;
+  }
+  .button {
+    width: fit-content;
+  }
+}

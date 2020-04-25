@@ -23,9 +23,11 @@ class MovieDetailsView extends Component {
   componentDidMount() {
     const { location } = this.props;
     const id = getIdFromProps(this.props);
-    API.getArticlesById(id).then(({ data }) =>
-      this.setState({ article: articleMapper(data) }),
-    );
+    if (id) {
+      API.getArticlesById(id).then(({ data }) =>
+        this.setState({ article: articleMapper(data) }),
+      );
+    }
     if (location.state && location.state.from) {
       this.setState({
         prevPage: location.state.from,

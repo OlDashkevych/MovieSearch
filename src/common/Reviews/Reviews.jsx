@@ -16,9 +16,11 @@ class Reviews extends Component {
 
   componentDidMount() {
     const { id } = this.props;
-    API.getArticleReview(id).then(({ data }) =>
-      this.setState({ reviews: reviewsMapper(data.results) }),
-    );
+    API.getArticleReview(id)
+      .then(({ data }) =>
+        this.setState({ reviews: reviewsMapper(data.results) }),
+      )
+      .catch(err => console.log(err));
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: 'smooth',

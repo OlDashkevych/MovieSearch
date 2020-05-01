@@ -47,23 +47,28 @@ class SaveFilmBtn extends Component {
   render() {
     const { isExist } = this.state;
     return (
-      <button
-        onClick={this.handleSaveToggle}
-        className={styles.addBtn}
-        style={{ backgroundColor: !isExist ? '#5c83a7' : '#a75c5c' }}
-      >
+      <div className={styles.btnBox}>
+        <button
+          onClick={this.handleSaveToggle}
+          className={styles.addBtn}
+          style={{ backgroundColor: !isExist ? '#5c83a7' : '#a75c5c' }}
+        >
+          {isExist ? (
+            <>
+              <FontAwesomeIcon icon={faMinus} className={styles.sign} />
+            </>
+          ) : (
+            <>
+              <FontAwesomeIcon icon={faPlus} className={styles.sign} />
+            </>
+          )}
+        </button>
         {isExist ? (
-          <>
-            <FontAwesomeIcon icon={faMinus} className={styles.sign} />
-            <span className={styles.text}>delete from my films</span>
-          </>
+          <span className={styles.text}>delete from my films</span>
         ) : (
-          <>
-            <FontAwesomeIcon icon={faPlus} className={styles.sign} />
-            <span className={styles.text}>add to my films</span>
-          </>
+          <span className={styles.text}>add to my films</span>
         )}
-      </button>
+      </div>
     );
   }
 }

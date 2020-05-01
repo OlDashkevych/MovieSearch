@@ -31,9 +31,9 @@ class Cast extends Component {
         {cast &&
           cast.map(({ name, id, character, profilePath }) => (
             <li key={id} className={styles.castListItem}>
-              <img src={profilePath} alt="profile" width="100" height="150" />
-              <span>Actor: {name}</span>
-              <span>Character: {character}</span>
+              <img className={styles.image} src={profilePath} alt="profile" width="100" height="150" />
+              <span className={styles.actor}>Actor: {name}</span>
+              <span className={styles.character}>Character: {character}</span>
             </li>
           ))}
       </ul>

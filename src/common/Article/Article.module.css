@@ -13,7 +13,47 @@
   width: 400px;
   height: 600px;
   object-fit: contain;
+  border-radius: 10px;
 }
 .articleDescription {
   max-width: 700px;
+}
+
+.title {
+  color: rgb(201, 78, 80);
+  font-size: 36px;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .articleImg {
+    width: 270px;
+    height: 460px;
+  }
+}
+
+@media (max-width: 500px) {
+  .article {
+    flex-wrap: wrap;
+  }
+  .articleImg {
+    width: 230px;
+    height: 344px;
+    margin: 0 auto;
+  }
+  .title {
+    text-align: center;
+  }
+  .score {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .overviewTitle {
+    text-align: center;
+    margin: 0;
+  }
+  .overview {
+    text-align: center;
+  }
 }

@@ -1,5 +1,5 @@
 .addBtn {
-  width: 60px;
+  max-width: 60px;
   height: 60px;
   background-color: #5c83a7;
   background-color: #a75c5c;
@@ -23,7 +23,28 @@
 .text {
   color: #e8e8fc;
   font-weight: bold;
-  position: absolute;
-  width: 60px;
-  left: 80px;
+  max-width: 80px;
+  text-align: center;
+}
+
+.btnBox {
+  max-width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .btnBox {
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .addBtn {
+    max-width: 140px;
+    height: 40px;
+    margin: 0 auto 14px;
+  }
+  .text {
+    width: 100%;
+    margin: 0 auto;
+  }
 }

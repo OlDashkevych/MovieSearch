@@ -19,11 +19,11 @@ const Article = ({
       <div className={styles.article}>
         <img src={posterPath} alt="film-banner" className={styles.articleImg} />
         <div className={styles.articleDescription}>
-          <h2>{title}</h2>
-          <span>Score: {userScore}</span>
+          <h2 className={styles.title}>{title}</h2>
+          <span className={styles.score}>Score: {userScore}</span>
           <div className="">
-            <h3>Overview</h3>
-            <p>{overview}</p>
+            <h3 className={styles.overviewTitle}>Overview</h3>
+            <p className={styles.overview}>{overview}</p>
           </div>
           <div className="">
             <h3>Genres</h3>
